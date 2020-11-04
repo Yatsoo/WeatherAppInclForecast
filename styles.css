@@ -1,0 +1,112 @@
+body {
+  font-family: "Lora", serif;
+}
+
+h1 {
+  text-align: left;
+  padding-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 15px;
+}
+
+input {
+  margin: -9px;
+  border: #aed0e9;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.container {
+  background-image: url("https://image.freepik.com/vecteurs-libre/ciel-pastel-fond-nuages-blancs_56745-87.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  border: 1px solid #aed0e9;
+  border-radius: 20px;
+  background-color: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+  max-width: 50%;
+  margin: 15px auto 0;
+}
+
+.currentdayweather .card {
+  background-color: transparent;
+  border: none;
+}
+
+.card-deck img {
+  width: 75px;
+}
+
+#line {
+  width: 55px;
+  margin: 0;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: start;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+.searchbutton .btn {
+  margin: 3px;
+  background-color: #4664fd;
+  border: #4664fd;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
+  transition: 0.3s all ease-in-out;
+}
+
+.currentbutton .btn {
+  margin: 3px;
+  background-color: #d679ed;
+  border: #d679ed;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
+  transition: 0.3s all ease-in-out;
+}
+
+.searchbutton .btn:hover {
+  background-color: #2d4ffc;
+}
+
+.currentbutton .btn:hover {
+  background-color: #b238fd;
+}
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.weeklytemperature .card,
+.card-header,
+.card-footer {
+  background-color: transparent;
+  border: transparent;
+}
+
+.weeklytemperature .card img {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.weeklytemperature .col {
+  text-align: center;
+}
+
+.source-code {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
