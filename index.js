@@ -47,6 +47,19 @@ function formatTime(timestamp) {
   return `${currentMonth} ${todaysDate}, ${currentYear} • ${hours}:${minutes}`;
 }
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function displayTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
@@ -72,11 +85,43 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast(response) {
+  console.log(response.data);
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 1; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `<div class="col d-flex justify-content-center">
+                  <div class="card text-center">
+                    <div class="card-header">${formatHours(
+                      forecast.dt * 1000
+                    )}</div>
+                    <img
+                      src="http://openweathermap.org/img/wn/${
+                        forecast.weather[0].icon
+                      }@2x.png"
+                      class="card-img-top"
+    
+                    />
+                    <div class="card-footer">${Math.round(
+                      forecast.main.temp
+                    )}°C</div>
+                  </div>
+                </div>`;
+  }
+}
+
 function search(city) {
   let apiKey = "75d95a41dc10b1a429fa3263e1c83647";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
   axios.get(apiUrl).then(displayTemperature);
+
+  apiKey = "75d95a41dc10b1a429fa3263e1c83647";
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
