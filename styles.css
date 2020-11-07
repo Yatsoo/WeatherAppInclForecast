@@ -13,7 +13,7 @@ ul {
 }
 
 input {
-  margin: -9px;
+  margin: 13px auto 0 110px;
   border: #aed0e9;
   box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
 }
@@ -61,17 +61,9 @@ li:first-letter {
   text-transform: capitalize;
 }
 .searchbutton .btn {
-  margin: 3px;
-  background-color: #4664fd;
-  border: #4664fd;
-  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
-  transition: 0.3s all ease-in-out;
-}
-
-.currentbutton .btn {
-  margin: 3px;
-  background-color: #d679ed;
-  border: #d679ed;
+  margin: 13px auto 0 -11px;
+  background-color: #3d439c;
+  border: #9f42dd;
   box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
   transition: 0.3s all ease-in-out;
 }
@@ -80,13 +72,11 @@ li:first-letter {
   background-color: #2d4ffc;
 }
 
-.currentbutton .btn:hover {
-  background-color: #b238fd;
-}
 .btn:active {
   transform: scale(0.98);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
+
 .weeklytemperature .card,
 .card-header,
 .card-footer {

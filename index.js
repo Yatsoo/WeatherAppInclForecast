@@ -149,18 +149,10 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
 }
 
-function sendSorryMessage(event) {
-  alert(
-    `Sorry, this feature is not available yet, please enter your current or requested location in the search bar then click on the search button 🔎😉`
-  );
-}
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let currentCityButton = document.querySelector("#current");
-currentCityButton.addEventListener("click", sendSorryMessage);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
