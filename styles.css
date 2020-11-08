@@ -28,7 +28,7 @@ a:hover {
 }
 
 .container {
-  background-image: url("https://image.freepik.com/free-vector/white-line-cloud-blue-sky_1182-1237.jpg");
+  background-image: url("https://image.freepik.com/free-vector/sky-heaven-nature-sunset-sunrise_107791-583.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -62,7 +62,7 @@ li:first-letter {
 }
 .searchbutton .btn {
   margin: 13px auto 0 -11px;
-  background-color: #3d439c;
+  background-color: #9bc7ec;
   border: #4664fd;
   box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
   transition: 0.3s all ease-in-out;
